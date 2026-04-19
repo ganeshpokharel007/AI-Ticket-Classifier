@@ -4,15 +4,21 @@ WiFi disconnecting frequently,network
 Slow internet speed,network
 Router not responding,network
 Network connection lost,network
+Cannot connect to VPN,network
+High latency in connection,network
 
 Laptop not turning on,hardware
 Screen broken,hardware
 Battery not charging,hardware
 Keyboard not working,hardware
 Overheating issue,hardware
+Fan making noise,hardware
+Hard drive failure,hardware
 
 Software crashing on startup,software
 Application not opening,software
 Error installing program,software
 System update failed,software
 App keeps freezing,software
+Login error,software
+Program not responding,software
