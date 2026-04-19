@@ -1,8 +1,11 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score
+from sklearn.model_selection import cross_val_score
+
+from sklearn.linear_model import LogisticRegression
+
+
 # Load data
 data = pd.read_csv("tickets.csv")
 
@@ -12,21 +15,19 @@ y = data["category"]
 
 # Convert text to numbers
 vectorizer = CountVectorizer(stop_words='english')
-
 X_vec = vectorizer.fit_transform(X)
 
-# Split data
-X_train, X_test, y_train, y_test = train_test_split(X_vec, y, test_size=0.2, random_state=42)
-# Train model
-model = MultinomialNB()
-model.fit(X_train, y_train)
+# Create model
+model = LogisticRegression(max_iter=200)
 
+# Calculate accuracy (better method)
+scores = cross_val_score(model, X_vec, y, cv=3)
+print("Average Accuracy:", scores.mean())
 
+# Train model on full data
+model.fit(X_vec, y)
 
-# After training
-y_pred = model.predict(X_test)
-print("Model Accuracy:", accuracy_score(y_test, y_pred))
-# Test prediction
+# Test with new samples
 samples = [
     "Internet not connecting",
     "Laptop screen broken",
