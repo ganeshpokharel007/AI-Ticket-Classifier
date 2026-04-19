@@ -61,6 +61,11 @@ http://127.0.0.1:5000/
 
 ---
 
+
+<img width="853" height="467" alt="image" src="https://github.com/user-attachments/assets/1aa7c3da-c2be-4b8e-bfb9-4150ccb44287" />
+
+
+
 ## 👨‍💻 Author
 
 Ganesh Pokharel
