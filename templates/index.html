@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Ticket Classifier</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #0078D4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>🤖 AI Ticket Classifier</h1>
+
+        <form method="POST">
+            <input type="text" name="text" placeholder="Describe your issue..." required>
+            <br>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <h2>Prediction: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
