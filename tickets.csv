@@ -1,5 +1,18 @@
 text,category
 Internet not working,network
+WiFi disconnecting frequently,network
+Slow internet speed,network
+Router not responding,network
+Network connection lost,network
+
 Laptop not turning on,hardware
-WiFi disconnects frequently,network
-Software crashing,software
+Screen broken,hardware
+Battery not charging,hardware
+Keyboard not working,hardware
+Overheating issue,hardware
+
+Software crashing on startup,software
+Application not opening,software
+Error installing program,software
+System update failed,software
+App keeps freezing,software
