@@ -27,8 +27,14 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 print("Model Accuracy:", accuracy_score(y_test, y_pred))
 # Test prediction
-sample = ["My internet is very slow"]
-sample_vec = vectorizer.transform(sample)
+samples = [
+    "Internet not connecting",
+    "Laptop screen broken",
+    "App keeps crashing"
+]
 
-prediction = model.predict(sample_vec)
-print("Predicted category:", prediction[0])
+samples_vec = vectorizer.transform(samples)
+predictions = model.predict(samples_vec)
+
+for s, p in zip(samples, predictions):
+    print(s, "->", p)
