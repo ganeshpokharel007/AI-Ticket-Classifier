@@ -1,73 +1,66 @@
-# 🤖 AI Ticket Classifier
+# 🤖 AI Ticket Classifier (Web App)
 
-## Overview
+## 📌 Overview
 
-This project is a simple Machine Learning application that classifies IT support tickets into categories such as:
+This is a machine learning web application that classifies IT support tickets into categories:
 
 * Network
 * Hardware
 * Software
 
-It helps automate support systems by reducing manual ticket sorting.
+Users can type a problem and get instant AI-based classification.
 
 ---
 
-## Features
+## 🚀 Live Features
 
-* Text classification using Machine Learning
-* Fast and lightweight model
-* Easy to expand with more data
+* Web interface using Flask
+* Real-time prediction
+* Machine learning model (Naive Bayes)
+* Text classification system
 
 ---
 
-## Technologies Used
+## 🛠️ Tech Stack
 
 * Python
-* Pandas
+* Flask
 * Scikit-learn
-
----
-
-## Project Structure
-
-* `model.py` → Main ML model
-* `tickets.csv` → Training dataset
+* Pandas
+* HTML/CSS
 
 ---
 
 ## ▶️ How to Run
 
-1. Install dependencies:
-
-```bash
-pip3 install pandas scikit-learn
+```bash id="r9x1qv"
+pip3 install flask pandas scikit-learn
+python3 app.py
 ```
 
-2. Run the model:
-
-```bash
-python3 model.py
-```
-
----
-
-## Example Output
+Then open:
 
 ```
-Predicted category: network
+http://127.0.0.1:5000/
 ```
 
 ---
 
-## Future Improvements
+## 📸 Preview
 
-* Add more training data
-* Improve model accuracy
-* Build a web interface using Flask
-* Deploy using cloud (Azure)
+(Add screenshot of your web app here)
 
 ---
 
-##  Author
+## 🔮 Future Improvements
+
+* Deploy online (Azure / Render)
+* Improve dataset
+* Add login system
+* Expand categories
+
+---
+
+## 👨‍💻 Author
 
 Ganesh Pokharel
